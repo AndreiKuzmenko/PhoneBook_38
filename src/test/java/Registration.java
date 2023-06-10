@@ -39,6 +39,25 @@ public class Registration {
         wd.findElement(By.xpath("//button[2]")).click();
         Assert.assertTrue(wd.findElements(By.xpath("//button")).size() > 0);
     }
+    @Test
+    public void RegNegative(){
+        wd.findElement(By.xpath("//*[.='LOGIN']")).click();
+
+        int i = (int)(System.currentTimeMillis()/1000)%3600;
+
+        WebElement emailInput = wd.findElement(By.xpath("//input[1]"));
+        emailInput.click();
+        emailInput.clear();
+        emailInput.sendKeys("ref" +i + "gmail.com");
+
+        WebElement passInput = wd.findElement(By.xpath("//input[2]"));
+        passInput.click();
+        passInput.clear();
+        passInput.sendKeys("$Qwe1234");
+
+        wd.findElement(By.xpath("//button[2]")).click();
+        Assert.assertTrue(wd.findElements(By.xpath("//button")).size() > 0);
+    }
 
  @AfterMethod
 public void tearDown(){
