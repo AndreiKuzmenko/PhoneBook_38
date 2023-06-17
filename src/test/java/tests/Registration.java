@@ -4,9 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Registration  extends TestBase {
+    @BeforeMethod
+    public void precondition() {
+        if(app.getUser().isLogged()){
+            app.getUser().logout();
+        }
+    }
 
 //    WebDriver wd;
 //
@@ -17,8 +24,16 @@ public class Registration  extends TestBase {
 //        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 //
 //    }
-//    @Test
-//    public void RegPositive(){
+    @Test
+   public void RegPositive(){
+        String email = "ref@gmail.com" ,password = "$Qwe1234";
+        app.getUser(). openLoginForm();
+        app.getUser(). fillLoginForm(email, password);
+        app.getUser(). submitLogin();
+        app.getUser(). pause(5000);
+        // Assert.assertTrue(wd.findElements(By.xpath("//button")).size() > 0);
+        Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//button")));
+    }
 //        wd.findElement(By.xpath("//*[.='LOGIN']")).click();
 //
 //        int i = (int)(System.currentTimeMillis()/1000)%3600;
@@ -69,16 +84,16 @@ public class Registration  extends TestBase {
 //    submitRegistration();
 //
 //    }
-    @Test
-    public void RegNegative3() {
-        int i = (int)(System.currentTimeMillis()/1000)%3600;
-        String email = "ref" + i + "@gmail.com" ,password = "Qwe1234";
-
-       app.getUser().openLoginForm();
-        app.getUser().fillLoginForm(email,password);
-        app.getUser().submitRegistration();
-
-    }
+//    @Test
+//    public void RegNegative3() {
+//        int i = (int)(System.currentTimeMillis()/1000)%3600;
+//        String email = "ref" + i + "@gmail.com" ,password = "Qwe1234";
+//
+//       app.getUser().openLoginForm();
+//        app.getUser().fillLoginForm(email,password);
+//        app.getUser().submitRegistration();
+//
+//    }
  @AfterMethod
 public void tearDown(){
 

@@ -25,8 +25,15 @@ public void precondition() {
    }
 }
 
-//    @Test
-//    public void loginPositiveTest() {
+   @Test
+  public void loginPositiveTest() {
+
+       String email = "ref@gmail.com" ,password = "$Qwe1234";
+       app.getUser(). openLoginForm();
+       app.getUser(). fillLoginForm(email, password);
+       app.getUser(). submitLogin();
+       app.getUser(). pause(3000);
+       Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//button")));
 //        wd.findElement(By.xpath("//*[.='LOGIN']")).click();
 //        WebElement emailInput = wd.findElement(By.xpath("//input[1]"));
 //        emailInput.click();
@@ -42,7 +49,8 @@ public void precondition() {
 //        pause(3000);
 //        Assert.assertTrue(wd.findElements(By.xpath("//button")).size() > 0);
 //
-//    }
+
+   }
     @Test
     public void loginPositiveTestBase() {
 
