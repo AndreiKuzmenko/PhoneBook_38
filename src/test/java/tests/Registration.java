@@ -1,5 +1,6 @@
 package tests;
 
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -26,10 +27,15 @@ public class Registration  extends TestBase {
 //    }
     @Test
    public void RegPositive(){
-        String email = "ref@gmail.com" ,password = "$Qwe1234";
+        int i = (int)(System.currentTimeMillis()/1000)%3600;
+        User user = new User()
+                .withEmail("ref" + i + "@gmail.com")
+                .withPassword("$Qwe1234")
+                ;
+
         app.getUser(). openLoginForm();
-        app.getUser(). fillLoginForm(email, password);
-        app.getUser(). submitLogin();
+        app.getUser(). fillLoginForm(user.getEmail(), user.getPassword());
+        app.getUser(). submitRegistration();
         app.getUser(). pause(5000);
         // Assert.assertTrue(wd.findElements(By.xpath("//button")).size() > 0);
         Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//button")));
