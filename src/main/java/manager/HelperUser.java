@@ -35,4 +35,8 @@ public class HelperUser extends HelperBase {
     public boolean isLogged (){
         return   isElementPresent(By.xpath("//*[.='Sign Out']"));
     }
+    public void login(User user){
+        openLoginForm();
+        fillLoginForm(user);
+        submitLogin();}
 }

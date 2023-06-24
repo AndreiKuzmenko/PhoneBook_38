@@ -10,15 +10,23 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
     WebDriver wd;
     HelperUser user;
+    HelperAddContact addContact;
 
     public HelperUser getUser() {
         return user;
     }
 
+    public HelperAddContact getAddContact() {
+        return addContact;
+    }
+
+
+
     @BeforeSuite
     public void init(){
         wd = new ChromeDriver();
         user = new HelperUser(wd);
+        addContact = new HelperAddContact(wd);
         wd.navigate().to("https://telranedu.web.app/home");
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
