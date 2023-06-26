@@ -27,6 +27,7 @@ public class ApplicationManager {
         wd = new ChromeDriver();
         user = new HelperUser(wd);
         addContact = new HelperAddContact(wd);
+       // wd.manage().window().maximize();
         wd.navigate().to("https://telranedu.web.app/home");
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
