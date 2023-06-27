@@ -90,6 +90,18 @@ public void precondition() {
 //
 //
 //    }
+@Test
+public void loginNegativeTestBase() {
+
+    String email = "refmail.com", password = "$Qwe1234";
+    app.getUser().openLoginForm();
+    app.getUser().fillLoginForm(email, password);
+    app.getUser().submitLogin();
+    //  app.getUser(). pause(3000);
+    Assert.assertTrue(app.getUser().isWrongFormatMassage());
+    Assert.assertTrue(app.getUser().isAlertPresent());
+}
+
     @AfterMethod
     public void tearDown(){
 

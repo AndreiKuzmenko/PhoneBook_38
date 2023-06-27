@@ -90,16 +90,16 @@ public class Registration  extends TestBase {
 //    submitRegistration();
 //
 //    }
-//    @Test
-//    public void RegNegative3() {
-//        int i = (int)(System.currentTimeMillis()/1000)%3600;
-//        String email = "ref" + i + "@gmail.com" ,password = "Qwe1234";
-//
-//       app.getUser().openLoginForm();
-//        app.getUser().fillLoginForm(email,password);
-//        app.getUser().submitRegistration();
-//
-//    }
+    @Test
+    public void RegNegative3() {
+        int i = (int)(System.currentTimeMillis()/1000)%3600;
+        String email = "ref" + i + "@gmail.com" ,password = "Qwe1234";
+
+       app.getUser().openLoginForm();
+        app.getUser().fillLoginForm(email,password);
+        app.getUser().submitRegistration();
+
+    }
  @AfterMethod
 public void tearDown(){
 
