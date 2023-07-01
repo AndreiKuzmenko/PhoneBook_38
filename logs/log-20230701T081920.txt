@@ -1,0 +1,2 @@
+08:19:27  INFO  tests.TestBase - Method loginPositiveTestBase is started
+08:19:36  INFO  tests.TestBase - ==================================

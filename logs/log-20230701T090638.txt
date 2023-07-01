@@ -1,0 +1,14 @@
+09:06:45  INFO  tests.TestBase - Method loginPositiveTestBase is started
+09:06:45  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //*[.='Sign Out']
+09:06:50  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //*[.='Sign Out'] is found
+09:06:50  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //*[.='LOGIN']
+09:06:50  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //*[.='LOGIN'] is found
+09:06:50  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[1]
+09:06:50  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[1] is found
+09:06:50  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[2]
+09:06:50  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[2] is found
+09:06:51  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[1]
+09:06:51  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[1] is found
+09:06:54  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button
+09:06:54  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button is found
+09:06:54  INFO  tests.TestBase - ==================================

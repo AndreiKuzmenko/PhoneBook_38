@@ -1,0 +1,20 @@
+09:07:27  INFO  tests.TestBase - Method loginPositiveTestBase is started
+09:07:27  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //*[.='Sign Out']
+09:07:33  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //*[.='Sign Out'] is found
+09:07:33  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //*[.='LOGIN']
+09:07:33  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //*[.='LOGIN'] is found
+09:07:33  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[1]
+09:07:33  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[1] is found
+09:07:33  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: input[2]
+09:07:37  INFO  manager.WebDriverListener - Something went wrong!
+09:07:37  INFO  manager.WebDriverListener - Cannot locate an element using xpath=input[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-Q6AEDAC', ip: '192.168.24.144', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+Driver info: driver.version: EventFiringWebDriver
+09:07:37  INFO  manager.WebDriverListener - org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=input[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-Q6AEDAC', ip: '192.168.24.144', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+Driver info: driver.version: EventFiringWebDriver
+09:07:37  INFO  tests.TestBase - ==================================

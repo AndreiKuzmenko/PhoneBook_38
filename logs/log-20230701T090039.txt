@@ -1,0 +1,16 @@
+09:00:46  INFO  tests.TestBase - Method RegPositive is started
+09:00:46  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //*[.='Sign Out']
+09:00:51  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //*[.='Sign Out'] is found
+09:00:51  INFO  manager.TestNgListener - Test RegPositive invoked
+09:00:51  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //*[.='LOGIN']
+09:00:51  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //*[.='LOGIN'] is found
+09:00:51  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[1]
+09:00:51  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[1] is found
+09:00:51  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[2]
+09:00:51  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[2] is found
+09:00:52  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[2]
+09:00:52  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[2] is found
+09:00:57  INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button
+09:00:57  INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button is found
+09:00:57  INFO  manager.TestNgListener - Test RegPositive successful
+09:00:57  INFO  tests.TestBase - ==================================
