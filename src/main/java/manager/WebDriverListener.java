@@ -27,7 +27,6 @@ public class WebDriverListener extends AbstractWebDriverEventListener {
         logger.info("Element with locator ----> " + by + " is found");
 
     }
-
     @Override
     public void onException(Throwable throwable, WebDriver driver) {
         super.onException(throwable, driver);
@@ -39,5 +38,6 @@ public class WebDriverListener extends AbstractWebDriverEventListener {
         HelperBase helperBase = new HelperBase(driver);
         helperBase.takeScreenshot(link);
         logger.info("This is a link to screenshot with error ---> " + link);
+
     }
 }

@@ -17,4 +17,4 @@ public class AddContact {
     String address;
     String description;
 
-};
+}

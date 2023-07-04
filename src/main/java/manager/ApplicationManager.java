@@ -17,8 +17,14 @@ public class ApplicationManager {
     HelperUser user;
     HelperAddContact addContact;
 
+    HelperContact helperContact;
+
     public HelperUser getUser() {
         return user;
+    }
+
+    public HelperContact getHelperContact() {
+        return helperContact;
     }
 
     public HelperAddContact getAddContact() {
@@ -33,6 +39,7 @@ public class ApplicationManager {
         wd = new EventFiringWebDriver( new ChromeDriver());
         wd.register(new WebDriverListener());
         user = new HelperUser(wd);
+        helperContact = new HelperContact (wd);
         addContact = new HelperAddContact(wd);
        // wd.manage().window().maximize();
         wd.navigate().to("https://telranedu.web.app/home");
@@ -41,6 +48,7 @@ public class ApplicationManager {
 
     @AfterSuite
     public void tearDown(){
-        wd.quit();
+
+        //wd.quit();
     }
 }
